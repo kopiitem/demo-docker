@@ -1,0 +1,21 @@
+= Spring boot with JPA, H2, etag, cache-control  
+
+== Run the app locally 
+
+[source]
+----
+mvn package
+mvn spring-boot:run
+----
+
+== Run the app from docker, after package the app
+
+[source]
+----
+docker build -t demo-docker -f Dockerfile .
+docker run -it -p 8080:8080 demo-docker
+----
+
+== Access to default IP and exposed port
+[source]
+http://192.168.99.100:8080/user/1
